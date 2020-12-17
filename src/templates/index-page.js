@@ -2,13 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 
-import Layout from "../components/Layout";
-import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
+import Header from "../components/header";
+import MainSection from "../components/main";
+import Footer from "../components/footerNew";
 
-export const IndexPageTemplate = ({ title }) => (
+export const IndexPageTemplate = (props) => (
   <div>
-    <h1>{title}</h1>
+    <Header
+      topHeaderLinks={props.topHeaderLinks}
+      headerLogo={props.headerLogo}
+    />
+    <MainSection
+      intro={props.intro}
+      plan={props.plan}
+      events={props.events}
+      hero={props.hero}
+    />
+    <Footer footer={props.footer} />
   </div>
 );
 
@@ -25,9 +35,29 @@ IndexPageTemplate.propTypes = {
 };
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const {
+    title,
+    topHeaderLinks,
+    headerLogo,
+    intro,
+    plan,
+    events,
+    footer,
+    hero,
+  } = data?.markdownRemark.frontmatter;
 
-  return <IndexPageTemplate title={frontmatter.title} />;
+  return (
+    <IndexPageTemplate
+      title={title}
+      topHeaderLinks={topHeaderLinks}
+      headerLogo={headerLogo}
+      intro={intro}
+      plan={plan}
+      events={events}
+      hero={hero}
+      footer={footer}
+    />
+  );
 };
 
 IndexPage.propTypes = {
@@ -45,6 +75,65 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        url
+        homeLink
+        description
+        events {
+          bottom
+          heading
+          body
+        }
+        liveEventLinks {
+          link
+          name
+        }
+        topHeaderLinks {
+          link
+          name
+        }
+        headerLogo
+        hero {
+          background
+          taglineImage
+        }
+        events {
+          body
+          bottom
+          heading
+          eventList {
+            logo
+            shortDescription
+            eventLink
+            eventLinkText
+          }
+        }
+        footer {
+          Copyright
+          address
+          contactEmail
+          phone
+          footerLinks {
+            link
+            name
+          }
+          footerLogo
+        }
+        plan {
+          mobileImage
+          image
+          description
+          heading
+        }
+        intro {
+          description
+          heading
+          comments {
+            comment {
+              commentText
+            }
+          }
+          introImage
+        }
       }
     }
   }
