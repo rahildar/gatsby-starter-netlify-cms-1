@@ -12,13 +12,13 @@ export const IndexPageTemplate = (props) => (
       topHeaderLinks={props.topHeaderLinks}
       headerLogo={props.headerLogo}
     />
-    <MainSection
+    {/* <MainSection
       intro={props.intro}
       plan={props.plan}
       events={props.events}
       hero={props.hero}
     />
-    <Footer footer={props.footer} />
+    <Footer footer={props.footer} /> */}
   </div>
 );
 
