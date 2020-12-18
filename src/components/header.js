@@ -32,11 +32,11 @@ export default function Header({ topHeaderLinks, headerLogo }) {
                   alt="Header Logo"
                   className="lgVisible"
                 />
-                <img
+                {/* <img
                   src="./images/common/logo_footer.png"
                   alt="Footer Logo"
                   className="xsVisible"
-                />
+                /> */}
               </a>
             </div>
           </div>

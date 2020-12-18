@@ -10,7 +10,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
       <IndexPageTemplate
         title={data.title}
         topHeaderLinks={data.topHeaderLinks}
-        headerLogo={data.headerLogo}
+        headerLogo={getAsset(entry.getIn(["data", "headerLogo"]))}
         intro={data.intro}
         plan={data.plan}
         events={data.events}
