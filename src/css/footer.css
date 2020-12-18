@@ -1,0 +1,172 @@
+footer {
+  color: #fff;
+  font-size: 14px;
+  padding: 34px 5px 6px;
+  text-align: center;
+  background-color: #263271;
+}
+
+footer .footer_logo {
+  text-align: left;
+}
+
+footer .logo {
+  margin: 0px;
+  max-width: 210px;
+}
+
+.footer-links {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.footer-links a {
+  color: #fff;
+  margin-bottom: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.footer-links a + a {
+  margin-top: 8px;
+}
+
+.poweredBy {
+  position: relative;
+  font-size: 0px;
+  max-width: 232px;
+}
+
+.poweredBy > a {
+  display: block;
+  min-height: 30px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-image: url(../../images/common/footer-personatech.png); */
+}
+
+.poweredBy {
+  margin: 0px auto;
+}
+
+.st-footer {
+  padding: 12px 0px;
+}
+
+.st-footCont > ul > li,
+.st-footCont > ul > li:nth-child(2) {
+  width: 100%;
+  display: block;
+}
+
+.st-footCont > ul > li:first-child,
+.st-footCont > ul > li:last-child {
+  display: none;
+}
+
+.st-footLinks > a {
+  display: block;
+  font-size: 14px;
+}
+
+.st-footLinks > a + a {
+  margin: 4px auto 0px;
+}
+
+.footer-socialLinks {
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+  list-style: none;
+  align-items: center;
+  display: inline-flex;
+}
+
+.contact-details .footer-socialLinks > li {
+  padding: 0 5px;
+}
+
+.contact-details .footer-socialLinks > li + li:before {
+  display: none;
+}
+
+footer .contact-details {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+footer .contact-details ul li {
+  line-height: 24px;
+}
+
+footer .contact-details ul li > a {
+  color: #fff;
+}
+
+footer .contact-details ul {
+  list-style: none;
+  margin: 0px -10px 0 10px;
+}
+
+footer .contact-details ul li {
+  position: relative;
+  font-size: 12px;
+  padding: 0px 10px;
+}
+
+footer .contact-details ul li a {
+  color: #fff;
+}
+
+footer .contact-details ul li a:hover,
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+footer .contact-details ul li + li:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  margin: -2px auto 0px;
+  background-color: #fff;
+}
+
+@media (max-width: 991px) {
+  footer .contact-details {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 20px 15px 10px;
+  }
+  .footer-links {
+    text-align: center;
+    margin: 20px 0 10px;
+  }
+  .poweredBy {
+    margin: 30px auto 10px;
+  }
+  .contact-details ul li {
+    display: block;
+  }
+  .contact-details ul li:before {
+    display: none;
+  }
+  .contact-details > .footer-socialLinks {
+    width: 100%;
+    margin: 10px auto 5px;
+    justify-content: center;
+  }
+}

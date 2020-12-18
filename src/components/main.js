@@ -9,12 +9,12 @@ export default function MainSection({ intro, plan, events, hero }) {
         <div
           className="gradient"
           style={{
-            backgroundImage: `url(${hero.background})`,
+            backgroundImage: `url(${hero.background.childImageSharp.fluid.src})`,
           }}></div>
         <div
           className="tagline-image"
           style={{
-            background: `url(${hero.taglineImage}) no-repeat center`,
+            background: `url(${hero.taglineImage.childImageSharp.fluid.src}) no-repeat center`,
           }}></div>
       </section>
       <section className="globalSection intro">
@@ -26,7 +26,10 @@ export default function MainSection({ intro, plan, events, hero }) {
             </div>
             <div className="col-6">
               <div className="content-image">
-                <img src={introImage} alt="Shoptalk Meetup" />
+                <img
+                  src={introImage.childImageSharp.fluid.src}
+                  alt="Shoptalk Meetup"
+                />
               </div>
             </div>
           </div>
@@ -299,9 +302,13 @@ export default function MainSection({ intro, plan, events, hero }) {
         <div className="wrapper">
           <h2 className="sectionTitle">{plan.heading}</h2>
           {plan.description}
-          <img src={plan.image} alt="Timeline" className="lgVisible" />
           <img
-            src={plan.mobileImage}
+            src={plan.image.childImageSharp.fluid.src}
+            alt="Timeline"
+            className="lgVisible"
+          />
+          <img
+            src={plan.mobileImage.childImageSharp.fluid.src}
             alt="Timeline Mobile"
             className="xsVisible"
           />
@@ -317,7 +324,10 @@ export default function MainSection({ intro, plan, events, hero }) {
                   <li>
                     <div className="meetupEventBox GSMeetup_Spring">
                       <div className="meetupEventBoxHeader">
-                        <img src={event.logo} alt="" />
+                        <img
+                          src={event.logo.childImageSharp.fluid.src}
+                          alt=""
+                        />
                       </div>
                       <div className="meetupEventBoxBody">
                         <div className="meetupEventDetails">

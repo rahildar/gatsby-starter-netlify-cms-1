@@ -27,7 +27,11 @@ export default function Header({ topHeaderLinks, headerLogo }) {
           <div className="col-4 col-logo">
             <div className="logo">
               <a href="/" title="Home">
-                <img src={headerLogo} alt="Header Logo" className="lgVisible" />
+                <img
+                  src={headerLogo.childImageSharp.fluid.src}
+                  alt="Header Logo"
+                  className="lgVisible"
+                />
                 <img
                   src="./images/common/logo_footer.png"
                   alt="Footer Logo"

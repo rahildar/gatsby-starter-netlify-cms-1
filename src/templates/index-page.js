@@ -83,6 +83,7 @@ export const pageQuery = graphql`
           heading
           body
         }
+
         liveEventLinks {
           link
           name
@@ -91,17 +92,43 @@ export const pageQuery = graphql`
           link
           name
         }
-        headerLogo
+        headerLogo {
+          childImageSharp {
+            fluid {
+              src
+              srcSet
+              base64
+            }
+          }
+        }
         hero {
-          background
-          taglineImage
+          background {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
+          taglineImage {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
         }
         events {
           body
           bottom
           heading
           eventList {
-            logo
+            logo {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
             shortDescription
             eventLink
             eventLinkText
@@ -116,11 +143,33 @@ export const pageQuery = graphql`
             link
             name
           }
-          footerLogo
+          footerLogo {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
         }
         plan {
-          mobileImage
-          image
+          mobileImage {
+            childImageSharp {
+              fluid {
+                base64
+                src
+                srcSet
+              }
+            }
+          }
+          image {
+            childImageSharp {
+              fluid {
+                src
+                srcSet
+                base64
+              }
+            }
+          }
           description
           heading
         }
@@ -132,7 +181,15 @@ export const pageQuery = graphql`
               commentText
             }
           }
-          introImage
+          introImage {
+            childImageSharp {
+              fluid {
+                src
+                srcSet
+                base64
+              }
+            }
+          }
         }
       }
     }

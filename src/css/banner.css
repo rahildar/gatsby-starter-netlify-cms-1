@@ -1,0 +1,62 @@
+.banner {
+  position: relative;
+  z-index: 4;
+  padding-top: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #263271;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(110, 255, 207, 1) 0%,
+    rgba(131, 218, 250, 1) 100%
+  );
+}
+
+.banner .gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: 25%;
+  background-repeat: repeat;
+}
+
+.tagline-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: -36%;
+
+  background-size: auto 70%;
+}
+
+@media only screen and (max-width: 767px) {
+  .tagline-image {
+    bottom: -50%;
+    background-size: auto 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .banner {
+    padding-top: 224px;
+    border-bottom-width: 1px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .banner {
+    padding-top: 340px;
+    border-bottom-width: 2px;
+  }
+  .banner .gradient {
+    background-repeat: repeat;
+    background-size: 260px;
+  }
+  .tagline-image {
+    bottom: -38%;
+    background-size: auto 342px;
+  }
+}

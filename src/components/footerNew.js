@@ -9,7 +9,10 @@ export default function Footer({ footer }) {
           <div className="col-4">
             <div className="footer_logo">
               <a href="/" className="logo" title="logo">
-                <img src={footerLogo} alt="Shoptalk Meetup" />
+                <img
+                  src={footerLogo.childImageSharp.fluid.src}
+                  alt="Shoptalk Meetup"
+                />
               </a>
             </div>
           </div>

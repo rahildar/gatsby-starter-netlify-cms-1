@@ -1,0 +1,136 @@
+.meetupsList {
+  position: relative;
+}
+
+.meetupsList > ul {
+  display: flex;
+  margin: 0px -12px;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.meetupsList > ul > li {
+  flex: 1;
+  flex-grow: 1;
+  padding: 0px 12px;
+}
+
+.meetupEventBox {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid #263271;
+}
+
+.meetupEventBox > .meetupEventBoxHeader {
+  padding: 32px 0px;
+  background-color: #263271;
+}
+
+.meetupEventBox.GSMeetup_Spring > .meetupEventBoxHeader {
+  background-color: #f05a2a;
+}
+
+.meetupEventBox.STMeetup_Women > .meetupEventBoxHeader {
+  background-color: #7249b2;
+}
+
+.meetupEventBox > .meetupEventBoxHeader > img {
+  max-height: 50px;
+}
+
+.meetupEventBox > .meetupEventBoxBody {
+  margin-bottom: 62px;
+}
+
+.meetupEventDetails {
+  position: relative;
+  padding: 24px;
+}
+
+.meetupEventDetails > b {
+  display: block;
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  font-family: "brandon_grotesque", sans-serif;
+}
+
+.meetupEventDetails > p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.meetupEventBoxFooter {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding-bottom: 12px;
+}
+
+.meetupEventBoxFooter > a {
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  min-width: 160px;
+  max-width: 180px;
+  margin: 0px auto;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-family: "brandon_grotesque", sans-serif;
+  background-color: #263271;
+  border: 2px solid #263271;
+}
+
+.meetupEventBox.GSMeetup_Spring > .meetupEventBoxFooter > a {
+  background-color: #f05a2a;
+}
+
+.meetupEventBox.STMeetup_Women > .meetupEventBoxFooter > a {
+  background-color: #7249b2;
+}
+
+.meetupsEventContent {
+  position: relative;
+  margin: 44px auto 12px;
+}
+
+.meetupsEventContent > p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media only screen and (max-width: 767px) {
+  .globalSection.meetupsWrapper {
+    padding: 32px 0px 8px;
+  }
+  .meetupsList > ul {
+    display: block;
+  }
+  .meetupsList > ul > li {
+    flex: auto;
+    margin-bottom: 24px;
+  }
+  .meetupsEventContent {
+    margin: 0px auto 12px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .globalSection.meetupsWrapper {
+    padding: 32px 0px 8px;
+  }
+  .meetupsList > ul {
+    flex-wrap: wrap;
+  }
+  .meetupsList > ul > li {
+    flex: 0 0 50%;
+    margin-bottom: 24px;
+  }
+}
