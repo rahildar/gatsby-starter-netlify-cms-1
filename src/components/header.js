@@ -28,7 +28,11 @@ export default function Header({ topHeaderLinks, headerLogo }) {
             <div className="logo">
               <a href="/" title="Home">
                 <img
-                  src={headerLogo?.childImageSharp?.fluid?.src}
+                  src={
+                    headerLogo.childImageSharp
+                      ? headerLogo.childImageSharp.fluid.src
+                      : headerLogo.url
+                  }
                   alt="Header Logo"
                   className="lgVisible"
                 />
