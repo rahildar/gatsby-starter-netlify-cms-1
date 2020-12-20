@@ -35,7 +35,7 @@ export default function MainSection({ intro, plan, events, hero }) {
             <div className="col-6">
               <div className="content-image">
                 <img
-                  src={introImage.childImageSharp.fluid.src}
+                  src={introImage?.childImageSharp?.fluid.src}
                   alt="Shoptalk Meetup"
                 />
               </div>
@@ -311,12 +311,12 @@ export default function MainSection({ intro, plan, events, hero }) {
           <h2 className="sectionTitle">{plan.heading}</h2>
           {plan.description}
           <img
-            src={plan.image.childImageSharp.fluid.src}
+            src={plan.image?.childImageSharp?.fluid.src}
             alt="Timeline"
             className="lgVisible"
           />
           <img
-            src={plan.mobileImage.childImageSharp.fluid.src}
+            src={plan.mobileImage?.childImageSharp?.fluid.src}
             alt="Timeline Mobile"
             className="xsVisible"
           />
@@ -333,7 +333,7 @@ export default function MainSection({ intro, plan, events, hero }) {
                     <div className="meetupEventBox GSMeetup_Spring">
                       <div className="meetupEventBoxHeader">
                         <img
-                          src={event.logo.childImageSharp.fluid.src}
+                          src={event.logo?.childImageSharp?.fluid.src}
                           alt=""
                         />
                       </div>

@@ -10,7 +10,7 @@ export default function Footer({ footer }) {
             <div className="footer_logo">
               <a href="/" className="logo" title="logo">
                 <img
-                  src={footerLogo.childImageSharp.fluid.src}
+                  src={footerLogo?.childImageSharp?.fluid.src}
                   alt="Shoptalk Meetup"
                 />
               </a>
