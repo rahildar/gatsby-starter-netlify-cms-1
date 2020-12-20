@@ -2,6 +2,7 @@ import React from "react";
 
 export default function Footer({ footer }) {
   const { address, phone, contactEmail, footerLinks, footerLogo } = footer;
+  console.log("$$FooterLogo$$", footerLogo);
   return (
     <footer>
       <div className="wrapper">
@@ -10,7 +11,11 @@ export default function Footer({ footer }) {
             <div className="footer_logo">
               <a href="/" className="logo" title="logo">
                 <img
-                  src={footerLogo?.childImageSharp?.fluid.src}
+                  src={
+                    footerLogo.childImageSharp
+                      ? footerLogo.childImageSharp.fluid.src
+                      : footerLogo.url
+                  }
                   alt="Shoptalk Meetup"
                 />
               </a>

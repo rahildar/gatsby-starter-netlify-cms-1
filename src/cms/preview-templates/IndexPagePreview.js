@@ -6,6 +6,8 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
   console.log("$$Data$$", data);
 
+  const footerLogo = getAsset(entry.getIn(["data", "footer", "footerLogo"]));
+
   if (data) {
     return (
       <IndexPageTemplate
@@ -16,7 +18,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         plan={data.plan}
         events={data.events}
         hero={data.hero}
-        footer={data.footer}
+        footer={{ ...data.footer, footerLogo }}
       />
     );
   } else {
