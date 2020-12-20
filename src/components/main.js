@@ -12,7 +12,7 @@ export default function MainSection({ intro, plan, events, hero }) {
             backgroundImage: `url(${
               hero.background.childImageSharp
                 ? hero.background.childImageSharp.fluid.src
-                : hero.background.url
+                : hero.background
             })`,
           }}></div>
         <div
@@ -21,7 +21,7 @@ export default function MainSection({ intro, plan, events, hero }) {
             background: `url(${
               hero.taglineImage.childImageSharp
                 ? hero.taglineImage.childImageSharp.fluid.src
-                : hero.taglineImage.url
+                : hero.taglineImage
             }) no-repeat center`,
           }}></div>
       </section>
