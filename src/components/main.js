@@ -9,12 +9,20 @@ export default function MainSection({ intro, plan, events, hero }) {
         <div
           className="gradient"
           style={{
-            backgroundImage: `url(${hero.background.childImageSharp.fluid.src})`,
+            backgroundImage: `url(${
+              hero.background.childImageSharp
+                ? hero.background.childImageSharp.fluid.src
+                : hero.background.url
+            })`,
           }}></div>
         <div
           className="tagline-image"
           style={{
-            background: `url(${hero.taglineImage.childImageSharp.fluid.src}) no-repeat center`,
+            background: `url(${
+              hero.taglineImage.childImageSharp
+                ? hero.taglineImage.childImageSharp.fluid.src
+                : hero.taglineImage.url
+            }) no-repeat center`,
           }}></div>
       </section>
       <section className="globalSection intro">

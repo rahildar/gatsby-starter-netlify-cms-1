@@ -4,6 +4,8 @@ import { IndexPageTemplate } from "../../templates/index-page";
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
+  console.log("$$Data$$", data);
+  console.log("##HeroAssets##", getAsset(entry.getIn(["data", "hero"])));
 
   if (data) {
     return (
@@ -14,7 +16,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         intro={data.intro}
         plan={data.plan}
         events={data.events}
-        hero={data.hero}
+        hero={getAsset(entry.getIn(["data", "hero"]))}
         footer={data.footer}
       />
     );
