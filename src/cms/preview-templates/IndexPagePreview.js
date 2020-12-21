@@ -7,8 +7,11 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const footerLogo = getAsset(entry.getIn(["data", "footer", "footerLogo"]));
   const background = getAsset(entry.getIn(["data", "hero", "background"]));
   const taglineImage = getAsset(entry.getIn(["data", "hero", "taglineImage"]));
+  const image = getAsset(entry.getIn(["data", "plan", "image"]));
+  const mobileImage = getAsset(entry.getIn(["data", "plan", "mobileImage"]));
+  const introImage = getAsset(entry.getIn(["data", "intro", "introImage"]));
 
-  console.log("$$Data$$", data, background, taglineImage);
+  console.log("$$Data$$", data, background, taglineImage, image, mobileImage);
 
   if (data) {
     return (
@@ -16,8 +19,8 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         title={data.title}
         topHeaderLinks={data.topHeaderLinks}
         headerLogo={getAsset(entry.getIn(["data", "headerLogo"]))}
-        intro={data.intro}
-        plan={data.plan}
+        intro={{ ...data.intro, introImage }}
+        plan={{ ...data.plan, image, mobileImage }}
         events={data.events}
         hero={{ ...data.hero, background, taglineImage }}
         footer={{ ...data.footer, footerLogo }}
