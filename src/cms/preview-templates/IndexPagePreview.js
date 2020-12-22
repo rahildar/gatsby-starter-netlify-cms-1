@@ -10,6 +10,10 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const image = getAsset(entry.getIn(["data", "plan", "image"]));
   const mobileImage = getAsset(entry.getIn(["data", "plan", "mobileImage"]));
   const introImage = getAsset(entry.getIn(["data", "intro", "introImage"]));
+  const eventList = data.eventList.map((e) => ({
+    ...e,
+    logo: getAsset(entry.getIn(e.logo)),
+  }));
 
   console.log("$$Data$$", data, background, taglineImage, image, mobileImage);
 
@@ -21,7 +25,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         headerLogo={getAsset(entry.getIn(["data", "headerLogo"]))}
         intro={{ ...data.intro, introImage }}
         plan={{ ...data.plan, image, mobileImage }}
-        events={data.events}
+        events={{ ...data.events, eventList }}
         hero={{ ...data.hero, background, taglineImage }}
         footer={{ ...data.footer, footerLogo }}
       />

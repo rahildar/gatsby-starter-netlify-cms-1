@@ -338,7 +338,7 @@ export default function MainSection({ intro, plan, events, hero }) {
         <div className="wrapper">
           <h3 className="sectionTitle">2021 Retail Meetups</h3>
           <div className="meetupsList">
-            {/* <ul className="list-inline">
+            <ul className="list-inline">
               {events.eventList.map((event) => {
                 return (
                   <li>
@@ -371,7 +371,7 @@ export default function MainSection({ intro, plan, events, hero }) {
                   </li>
                 );
               })}
-            </ul> */}
+            </ul>
           </div>
           <div className="meetupsEventContent text-center">{events.bottom}</div>
         </div>
