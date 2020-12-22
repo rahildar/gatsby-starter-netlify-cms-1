@@ -10,7 +10,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const image = getAsset(entry.getIn(["data", "plan", "image"]));
   const mobileImage = getAsset(entry.getIn(["data", "plan", "mobileImage"]));
   const introImage = getAsset(entry.getIn(["data", "intro", "introImage"]));
-  const eventList = data.eventList.map((e) => ({
+  const eventList = data.events.eventList.map((e) => ({
     ...e,
     logo: getAsset(entry.getIn(e.logo)),
   }));
