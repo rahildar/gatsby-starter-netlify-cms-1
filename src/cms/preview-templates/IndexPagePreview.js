@@ -12,10 +12,18 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const introImage = getAsset(entry.getIn(["data", "intro", "introImage"]));
   const eventList = data.events.eventList.map((e) => ({
     ...e,
-    logo: getAsset(entry.getIn(e.logo)),
+    logo: getAsset(e.logo),
   }));
 
-  console.log("$$Data$$", data, background, taglineImage, image, mobileImage);
+  console.log(
+    "$$Data$$",
+    data,
+    background,
+    taglineImage,
+    image,
+    mobileImage,
+    eventList
+  );
 
   if (data) {
     return (
