@@ -343,6 +343,13 @@ export default function MainSection({ intro, plan, events, hero }) {
               {events.eventList.map((event) => {
                 return (
                   <li>
+                    {event.logo.childImageSharp
+                      ? event.logo.childImageSharp.fluid.src
+                      : event.logo.url}
+                    {event.eventLink}
+                    {event.eventLinkText}
+                    {event.shortDescription}
+
                     <div className="meetupEventBox GSMeetup_Spring">
                       <div className="meetupEventBoxHeader">
                         <img
@@ -356,7 +363,7 @@ export default function MainSection({ intro, plan, events, hero }) {
                       </div>
                       <div className="meetupEventBoxBody">
                         <div className="meetupEventDetails">
-                          <b>{event.eventDate}</b>
+                          {/* <b>{event.eventDate}</b> */}
                           {event.shortDescription}
                         </div>
                       </div>
