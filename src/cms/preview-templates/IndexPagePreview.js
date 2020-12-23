@@ -15,6 +15,9 @@ const IndexPagePreview = ({ entry, getAsset }) => {
     logo: getAsset(e.logo),
   }));
 
+  console.log("$$eventList", eventList);
+  console.log("$$introImage", mobileImage);
+
   console.log(
     "$$Data$$",
     data,

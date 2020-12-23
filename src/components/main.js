@@ -3,6 +3,7 @@ import Image from "gatsby-image";
 
 export default function MainSection({ intro, plan, events, hero }) {
   const { heading, description, introImage, comments } = intro;
+  console.log("##events", events);
   return (
     <main>
       <section className="globalSection banner" style={{ height: 374 }}>
