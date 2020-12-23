@@ -356,7 +356,6 @@ export default function MainSection({ intro, plan, events, hero }) {
                       </div>
                       <div className="meetupEventBoxBody">
                         <div className="meetupEventDetails">
-                          <b>{event.eventDate?.toString()}</b>
                           {event.shortDescription}
                         </div>
                       </div>
