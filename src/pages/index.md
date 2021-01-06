@@ -22,7 +22,7 @@ hero:
   taglineImage: /img/banner-bg-tagline.png
 intro:
   heading: What is this ..  this is that and that is this
-  description: what is this description
+  description: what is this description .... hellow
   introImage: /img/intro-content-img.png
   comments:
     - comment:
