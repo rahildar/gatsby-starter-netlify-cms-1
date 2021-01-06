@@ -21,7 +21,7 @@ hero:
   background: /img/banner-bg-repeat.png
   taglineImage: /img/banner-bg-tagline.png
 intro:
-  heading: What is this
+  heading: What is this ..  this is that and that is this
   description: what is this description
   introImage: /img/intro-content-img.png
   comments:
@@ -33,10 +33,9 @@ events:
   body: Event information
   eventList:
     - eventDate: 2020-12-05T07:15:59.391Z
-      shortDescription: A fun, productive way to connect online with the Grocery
-        and CPG community. Connect online with the people you
-        know and meet the people you don’t--in a friendly and
-        open environment.
+      shortDescription: A fun, productive way to connect online with the Grocery and
+        CPG community. Connect online with the people you know and meet the
+        people you don’t--in a friendly and open environment.
       eventLinkText: Learn more
       eventLink: https://google.com
       logo: /img/GSMeetup_Women_logo@2x.png
