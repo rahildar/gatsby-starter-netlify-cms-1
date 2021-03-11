@@ -40,7 +40,7 @@ events:
       eventLink: https://google.com
       logo: /img/GSMeetup_Women_logo@2x.png
 plan:
-  heading: Plan Heading
+  heading: Plan Heading Changed
   description: Plan description
   image: /img/timeline_bg@2x.png
   mobileImage: /img/timeline_bg_mobile@2x.png
