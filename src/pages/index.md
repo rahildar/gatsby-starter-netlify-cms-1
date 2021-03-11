@@ -39,6 +39,13 @@ events:
       eventLinkText: Learn more
       eventLink: https://google.com
       logo: /img/GSMeetup_Women_logo@2x.png
+    - eventDate: 2021-03-11T11:24:44.090Z
+      logo: /img/STMeetup_Fall_logo@2x.png
+      shortDescription: A fun, productive way to connect online with the Grocery and
+        CPG community. Connect online with the people you know and meet the
+        people you don’t--in a friendly and open environment.
+      eventLinkText: Learn More
+      eventLink: www.google.com
 plan:
   heading: Plan Heading Changed
   description: Plan description
